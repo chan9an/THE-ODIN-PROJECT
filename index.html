@@ -3,9 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Emmet Practice</title>
 </head>
 <body>
-    
+
+    <!-- <spar class="pur"></spar> ----> 
+    <span class="purple"></span> <!-- Here, just span.purple makes a class with "purple" -->
+    <span id="89yu"></span> <!-- Here, just span#89yu creates an ID -->
+    <button id="89hsahda"></button> <!-- Here, Button#89hsahda creates an ID for the button -->
+    <div class="class1 class2" id="ty"></div> <!-- div.class1.class2#ty includes multiple classes and one ID -->
+    <!-- A class can be assigned to many elements, but one element can have only one unique ID -->
+
+    <button button=""></button> <!-- button[button]: Adds a custom attribute -->
+    <div password=""></div> <!-- [password]: Adds a custom attribute -->
+
+    <div class="p"> <!-- div.p>span.cyan#67761>p.op can create children as well -->
+        <span class="cyan" id="6776">
+            <p class="op"></p>
+        </span>
+    </div>
+
+    <header>
+        <!-- header>nav>ul>li*4 creates a navigation list -->
+        <!-- You can add text directly using header>nav>ul>li*4{Home} (same text for all items) -->
+        <!-- Use header>nav>ul>li*4.class-$ to assign classes with numbers like class-1, class-2 -->
+        <nav>
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Services</li>
+                <li>Contact</li>
+            </ul>
+        </nav>
+    </header>
+
+    <header></header> <!-- header+main+footer creates siblings -->
+    <main></main>
+    <footer></footer>
+
+    <!-- header>nav+main+footer makes everything a child of header, with main and footer as siblings -->
+    <!-- To overcome this, use ^ to step outside: header>nav ^ main+footer -->
+    <!-- Example: (header>nav)+main+footer creates header and its nav child, with main and footer as siblings -->
+    <header>
+        <!-- Example of complex Emmet: (header>h1{Hello World}+nav>ol>li.class-$*5>a{Link $})+main+footer -->
+        <h1>Hello World</h1>
+        <nav>
+            <ol>
+                <li class="class-1"><a href="#">Link 1</a></li>
+                <li class="class-2"><a href="#">Link 2</a></li>
+                <li class="class-3"><a href="#">Link 3</a></li>
+                <li class="class-4"><a href="#">Link 4</a></li>
+                <li class="class-5"><a href="#">Link 5</a></li>
+            </ol>
+        </nav>
+    </header>
+    <main></main>
+    <footer></footer>
+
 </body>
 </html>
